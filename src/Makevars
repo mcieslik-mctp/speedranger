@@ -1,0 +1,5 @@
+RHTSLIB_LIBS=`echo 'Rhtslib::pkgconfig("PKG_LIBS")'|\
+    "${R_HOME}/bin/R" --vanilla --slave`
+PKG_LIBS=$(RHTSLIB_LIBS)
+PKG_CPPFLAGS = -I../inst/include
+CXX_STD=CXX11
